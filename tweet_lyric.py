@@ -76,7 +76,7 @@ def get_lyrics():
                 api.verify_credentials()
                 print("Authentication OK")
                 # print(one_liner)
-                api.update_status(one_liner)
+                api.update_status(one_liner +' @ayanniranj')
             except:
         
                 print("Error during authentication")
