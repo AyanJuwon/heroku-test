@@ -1,5 +1,3 @@
-# created by virtualenv automatically
-*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -104,14 +102,13 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-
+.env
 .venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
-bastille_bot
 
 # Spyder project settings
 .spyderproject
@@ -127,7 +124,6 @@ bastille_bot
 .mypy_cache/
 .dmypy.json
 dmypy.json
-config.py
 
 # Pyre type checker
 .pyre/
