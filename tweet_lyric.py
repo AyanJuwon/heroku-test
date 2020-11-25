@@ -87,6 +87,8 @@ Ldef get_lyrics():
     
 get_lyrics()
 
+####create a list that saves each lyric, for the past 5 days,  if a lyric repeats,  rerun main function,  else append to said list.. 
+####while list size is less than 120 run function,  else,  pop first element and then run function 
 
 def checklist():
     pass
