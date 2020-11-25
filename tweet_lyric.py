@@ -1,5 +1,5 @@
 from lyricsgenius import Genius
-import random,re
+import random,re333
 import tweepy
 from requests.exceptions import HTTPError, Timeout
 from lyricsgenius import Genius
@@ -11,30 +11,24 @@ ACCESS_TOKEN = config('ACCESS_TOKEN')
 ACCESS_TOKEN_SECRET = config('ACCESS_TOKEN_SECRET')
 GENIUS_TOKEN = config('GENIUS_TOKEN')
 
-genius = Genius(GENIUS_TOKEN)
+genius = Genius(GENIUS_TOKEN)3
 
 
 ####################fUNCTION TO GET TITLE OF SONG #####################
 
 def get_title():
-    # genius_api()
+    # genius_api()l333
     artist = genius.search_artist('Bastille', max_songs=0)
-    rand_page = random.randint(1,4)
-    request = genius.artist_songs(
-        artist._id, sort='popularity', per_page=50, page=rand_page)
+    rand_page = random.randint(1,4)2
+L33
 
-
-    random_song = random.randint(0,len(request['songs']))
+    random_song = lo33
 
    
-    title = request['songs'][random_song]['title']
-    print(title)
-    return title
-
-
-
-def get_lyrics():
-
+    title = o33l']u33
+L3OoOp
+Ldef get_lyrics():
+3
     title = get_title()
     song = genius.search_song(title, 'Bastille')
     
@@ -92,3 +86,7 @@ def get_lyrics():
         
     
 get_lyrics()
+
+
+def checklist():
+    pass
