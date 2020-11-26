@@ -11,24 +11,30 @@ ACCESS_TOKEN = config('ACCESS_TOKEN')
 ACCESS_TOKEN_SECRET = config('ACCESS_TOKEN_SECRET')
 GENIUS_TOKEN = config('GENIUS_TOKEN')
 
-genius = Genius(GENIUS_TOKEN)3
+genius = Genius(GENIUS_TOKEN)
 
 
 ####################fUNCTION TO GET TITLE OF SONG #####################
-
 def get_title():
-    # genius_api()l333
+    # genius_api()
     artist = genius.search_artist('Bastille', max_songs=0)
-    rand_page = random.randint(1,4)2
-L33
+    rand_page = random.randint(1,4)
+    request = genius.artist_songs(
+        artist._id, sort='popularity', per_page=50, page=rand_page)
 
-    random_song = lo33
+
+    random_song = random.randint(0,len(request['songs']))
 
    
-    title = o33l']u33
-L3OoOp
-Ldef get_lyrics():
-3
+    title = request['songs'][random_song]['title']
+    print(title)
+    return title
+
+
+
+
+def get_lyrics():
+
     title = get_title()
     song = genius.search_song(title, 'Bastille')
     
@@ -41,8 +47,7 @@ Ldef get_lyrics():
         result = re.sub(regex, subst, lyrics, 0, re.MULTILINE)
 
         split = result.split('\n')
-        #print(split)
-        #print(result)
+        
         ####Filter out all empty strings in the split list
         res = list(filter(('').__ne__, split))
         print('length of lyrics is :', len(res))
