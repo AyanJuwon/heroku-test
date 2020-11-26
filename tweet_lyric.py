@@ -84,6 +84,7 @@ def get_lyrics():
                     get_lyrics()
                 else:
                     lyrics_list.append(one_liner)
+                    print(lyrics_list)
                     auth = tweepy.OAuthHandler(CONSUMER_KEY,
                                                CONSUMER_SECRET)
                     auth.set_access_token(ACCESS_TOKEN,
